@@ -112,6 +112,7 @@ const skills = [
 
 const App: React.FC = () => {
   const experience = formatExperienceSince(new Date(2021, 5, 1));
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   const handleScrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -120,11 +121,21 @@ const App: React.FC = () => {
     }
   };
 
+  const handleNavLinkClick = (id: string) => {
+    handleScrollTo(id);
+    setIsNavOpen(false);
+  };
+
   const handleContactClick = () => {
     const el = document.getElementById('contact');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    setIsNavOpen(false);
+  };
+
+  const toggleNav = () => {
+    setIsNavOpen((prev) => !prev);
   };
 
   return (
@@ -134,20 +145,30 @@ const App: React.FC = () => {
           <div className="logo">
             Pramod <span>Singh</span>
           </div>
-          <nav className="nav-links">
-            <button className="nav-link" onClick={() => handleScrollTo('about')}>
+          <button
+            className={`nav-toggle ${isNavOpen ? 'nav-toggle-open' : ''}`}
+            onClick={toggleNav}
+            aria-label="Toggle navigation"
+            aria-expanded={isNavOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+          <nav className={`nav-links ${isNavOpen ? 'nav-links-open' : ''}`}>
+            <button className="nav-link" onClick={() => handleNavLinkClick('about')}>
               About
             </button>
-            <button className="nav-link" onClick={() => handleScrollTo('projects')}>
+            <button className="nav-link" onClick={() => handleNavLinkClick('projects')}>
               Projects
             </button>
-            <button className="nav-link" onClick={() => handleScrollTo('experience')}>
+            <button className="nav-link" onClick={() => handleNavLinkClick('experience')}>
               Experience
             </button>
-            <button className="nav-link" onClick={() => handleScrollTo('skills')}>
+            <button className="nav-link" onClick={() => handleNavLinkClick('skills')}>
               Skills
             </button>
-            <button className="nav-link" onClick={() => handleScrollTo('contact')}>
+            <button className="nav-link" onClick={() => handleNavLinkClick('contact')}>
               Contact
             </button>
           </nav>
@@ -220,10 +241,12 @@ const App: React.FC = () => {
                   <div>
                     <div className="hero-card-label hero-card-label-strong">Technology</div>
                     <div className="pill-row">
-                      <span className="pill">React</span>
+                      <span className="pill">React Js</span>
                       <span className="pill">TypeScript</span>
-                      <span className="pill">Tailwind</span>
-                      <span className="pill">Vite</span>
+                      <span className="pill">Node Js</span>
+                      <span className="pill">Microservices</span>
+                      <span className="pill">AWS</span>
+                      <span className="pill">Next Js</span>
                     </div>
                   </div>
                 </div>
