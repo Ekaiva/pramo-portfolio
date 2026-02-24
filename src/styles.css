@@ -2,13 +2,34 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
 }
+html {
+  box-sizing: border-box;
+  position: relative;
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at top left, #0f172a, #020617 55%, #000000);
+    z-index: -1;
+  }
+}
+
+
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: radial-gradient(circle at top left, #0f172a, #020617 55%, #000000);
   color: #e5e7eb;
+  
+  
+
+  
 }
 
 p {
@@ -26,6 +47,7 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 .container {
@@ -42,6 +64,7 @@ a {
   backdrop-filter: blur(14px);
   background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.35));
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  
 }
 
 .nav-inner {
