@@ -422,7 +422,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} Pramod Singh. Built with React & Vite.
+        © {new Date().getFullYear()} Pramod Singh
       </footer>
     </div>
   );
