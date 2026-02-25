@@ -511,6 +511,14 @@ main {
   color: #9ca3af;
 }
 
+.project-pill-backend {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+}
+
 .card-body {
   font-size: 0.9rem;
   color: #9ca3af;

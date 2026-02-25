@@ -34,15 +34,15 @@ const projects = [
     role: 'Software Developer at PayMe India'
   },
   {
-    title: 'Loan Management System',
-    period: '2022 – 2023',
+    title: 'Saas Loan Management System',
+    period: '2022 – 2024',
     description:
       'Developed a React‑based loan management system for clients to manage applications, approvals, and repayments with automated testing workflows for reliability.',
     tech: ['React', 'Jest', 'Node.js'],
     role: 'Software Developer at PayMe India'
   },
   {
-    title: 'CRM (ReactJS + GraphQL)',
+    title: 'SaaS CRM admin portal',
     period: '2021 – 2022',
     description:
       'Built a SaaS admin CRM portal in React and integrated GraphQL APIs for fast, efficient data fetching and a smooth admin experience.',
@@ -51,19 +51,19 @@ const projects = [
   },
   {
     title: 'Digital Signature Email Service',
-    period: 'Backend microservice',
+    period: '2023 – 2024',
     description:
       'Developed a secure and efficient REST API that digitally signs documents and delivers them to users via email.',
-    tech: ['Node.js', 'AWS SES', 'AWS S3', 'Express'],
-    role: 'Backend Microservice'
+    tech: ['Node.js', 'AWS SES', 'AWS S3', 'Express', 'MongoDB'],
+    role: 'Backend microservice · PayMe India'
   },
   {
     title: 'E‑Mandate API',
-    period: 'Backend microservice',
+    period: '2023 – 2024',
     description:
       'Built a REST API to enable automated EMI deductions every month using the Razorpay payment gateway.',
-    tech: ['Node.js', 'Razorpay API', 'Express'],
-    role: 'Backend Microservice'
+    tech: ['Node.js', 'Razorpay API', 'Express', 'MongoDB'],
+    role: 'Backend microservice · PayMe India'
   }
 ];
 
@@ -111,7 +111,7 @@ const skills = [
 ];
 
 const App: React.FC = () => {
-  const experience = formatExperienceSince(new Date(2021, 5, 1));
+  const experience = formatExperienceSince(new Date(2021, 6, 1));
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   const handleScrollTo = (id: string) => {
@@ -318,10 +318,13 @@ const App: React.FC = () => {
                 <article className="card" key={project.title}>
                   <div className="card-header">
                     <div>
-                      <div className="card-title">{project.title}</div>
-                      <div className="card-meta">
-                        {project.period} • {project.role}
-                      </div>
+                  <div className="card-title">{project.title}</div>
+                  <div className="card-meta">
+                    {project.period} • {project.role}
+                  </div>
+                  {project.role.startsWith('Backend microservice') && (
+                    <div className="project-pill-backend contact-value">Backend microservice</div>
+                  )}
                     </div>
                   </div>
                   <p className="card-body">{project.description}</p>
