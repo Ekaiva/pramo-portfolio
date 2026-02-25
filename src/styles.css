@@ -221,9 +221,9 @@ main {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 460px) {
   .hero-heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -387,12 +387,18 @@ main {
   font-size: 0.7rem;
   text-transform: uppercase;
   color: #9ca3af;
+  @media (max-width: 460px) {
+    font-size: 0.6rem;
+  }
 }
 
 .hero-card-name {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
+  @media (max-width: 460px) {
+    font-size: 1rem;
+  }
 }
 
 .hero-card-role {
