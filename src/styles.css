@@ -232,6 +232,7 @@ main {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-size: 20px;
 }
 
 .hero-tag {
@@ -634,7 +635,7 @@ main {
     #6fba82
   );
   background-size: 300% 300%;
-  animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 2s ease alternate infinite;
   z-index: -1;
 }
 
@@ -770,7 +771,7 @@ main {
     #6fba82
   );
   background-size: 300% 300%;
-  animation: animatedgradient 3s ease alternate infinite;
+  animation: animatedgradient 2s ease alternate infinite;
   z-index: -2;
 }
 

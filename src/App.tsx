@@ -26,6 +26,14 @@ const projects = [
     role: 'Senior Software Developer at Paytm'
   },
   {
+    title: 'UPI Lite & UPI Mandate – Subscriptions & IPO',
+    period: '2024 – Present',
+    description:
+      'Worked on UPI Lite and UPI mandate based flows at Paytm, enabling one‑time and recurring subscriptions (including IPO and other use‑cases) with reliable, low‑friction payment experiences.',
+    tech: ['React', 'Node.js', 'UPI Lite', 'UPI Mandate', 'WebView'],
+    role: 'Senior Software Developer at Paytm'
+  },
+  {
     title: 'CreditAssist – Credit Health Platform',
     period: '2023 – 2024',
     description:
@@ -159,11 +167,11 @@ const App: React.FC = () => {
             <button className="nav-link" onClick={() => handleNavLinkClick('about')}>
               About
             </button>
-            <button className="nav-link" onClick={() => handleNavLinkClick('projects')}>
-              Projects
-            </button>
             <button className="nav-link" onClick={() => handleNavLinkClick('experience')}>
               Experience
+            </button>
+            <button className="nav-link" onClick={() => handleNavLinkClick('projects')}>
+              Projects
             </button>
             <button className="nav-link" onClick={() => handleNavLinkClick('skills')}>
               Skills
@@ -185,9 +193,9 @@ const App: React.FC = () => {
               </div>
              
               <h1 className="hero-heading">
-                Building reliable payment & credit
+                Building reliable payment services 
                 <br />
-                <span>experiences with React & Node</span>
+                <span>Experiences with React & Node</span>
               </h1>
               <p className="hero-body">
                 I&apos;m Pramod, Senior Software Developer focused on fintech and digital payments. I have built UPI VPA creation systems, including custom VPA generation, validation logic, bank integrations, and production-grade payment flows. My expertise lies in developing scalable credit journeys, UPI integrations, and internal platforms using React, Node.js, and modern web technologies. I prioritize performance, security, and clean architecture to deliver systems that are both user-friendly and operationally reliable.
@@ -210,6 +218,14 @@ const App: React.FC = () => {
                   }}
                 >
                   View projects
+                </a>
+                <a
+                  className="btn btn-outline"
+                  href="https://drive.google.com/file/d/1x1V7A2nC6d_-ZKVnj-aQADRqdgojJhPB/view?usp=drive_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -305,42 +321,6 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
-
-        <section id="projects">
-          <div className="container">
-            <h2 className="section-title">Projects</h2>
-            <p className="section-subtitle">
-              A selection of work that shows how I think about UI, data, and production‑ready flows.
-            </p>
-
-            <div className="grid grid-2">
-              {projects.map((project) => (
-                <article className="card" key={project.title}>
-                  <div className="card-header">
-                    <div>
-                  <div className="card-title">{project.title}</div>
-                  <div className="card-meta">
-                    {project.period} • {project.role}
-                  </div>
-                  {project.role.startsWith('Backend microservice') && (
-                    <div className="project-pill-backend contact-value">Backend microservice</div>
-                  )}
-                    </div>
-                  </div>
-                  <p className="card-body">{project.description}</p>
-                  <div className="tag-row">
-                    {project.tech.map((t) => (
-                      <span className="tag" key={t}>
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="experience">
           <div className="container">
             <h2 className="section-title">Experience</h2>
@@ -370,6 +350,39 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
+        <section id="projects">
+          <div className="container">
+            <h2 className="section-title">Projects</h2>
+            <p className="section-subtitle">
+              A selection of work that shows how I think about UI, data, and production‑ready flows.
+            </p>
+
+            <div className="grid grid-2">
+              {projects.map((project) => (
+                <article className="card" key={project.title}>
+                  <div className="card-header">
+                    <div>
+                      <div className="card-title">{project.title}</div>
+                      {project.role.startsWith('Backend microservice') && (
+                        <div className="project-pill-backend contact-value">Backend microservice</div>
+                      )}
+                    </div>
+                  </div>
+                  <p className="card-body">{project.description}</p>
+                  <div className="tag-row">
+                    {project.tech.map((t) => (
+                      <span className="tag" key={t}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+ 
 
         <section id="skills">
           <div className="container">
