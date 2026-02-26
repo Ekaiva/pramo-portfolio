@@ -187,7 +187,7 @@ const App: React.FC = () => {
         <section id="hero">
           <div className="container hero">
             <div>
-              <div className="hero-tag">
+              <div className="hero-tag hk-pill p_10">
                 <span className="hero-tag-dot" />
                 Senior Software Developer · Paytm
               </div>

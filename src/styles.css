@@ -247,6 +247,56 @@ main {
   margin-bottom: 0.9rem;
 }
 
+.hero-tag.hk-pill {
+  --hk-border: 2px;
+  --hk-radius: 999px;
+  --hk-accent: #409;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: none;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.9);
+  animation: hkGlow 2s linear infinite;
+}
+
+.hero-tag.hk-pill::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(#fff 0%, #000 3%, var(--hk-accent) 60%, #fff 100%);
+  animation: hkSpin 3s linear infinite;
+  z-index: -2;
+}
+.p_10{
+  padding: 10px;
+}
+
+.hero-tag.hk-pill::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - var(--hk-border));
+  height: calc(100% - var(--hk-border));
+  transform: translate(-50%, -50%);
+  border-radius: var(--hk-radius);
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.hero-tag.hk-pill > * {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-tag-dot {
   width: 0.5rem;
   height: 0.5rem;
@@ -495,7 +545,9 @@ main {
   .btn-primary,
   .btn-primary::after,
   .btn-hk,
-  .btn-hk::before {
+  .btn-hk::before,
+  .hero-tag.hk-pill,
+  .hero-tag.hk-pill::before {
     animation: none !important;
     transition: none !important;
   }
