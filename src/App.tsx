@@ -114,7 +114,7 @@ const skills = [
   { name: 'Node.js', level: 'Intermediate' },
   { name: 'GraphQL', level: 'Advanced' },
   { name: 'Git / GitHub / Bitbucket', level: 'Advanced' },
-  { name: 'AWS (SES, S3, Secrets Manager)', level: 'Intermediate' },
+  { name: 'AWS (SES, S3)', level: 'Intermediate' },
   { name: 'Docker & Nginx', level: 'Intermediate' },
 ];
 
@@ -206,7 +206,7 @@ const App: React.FC = () => {
                 <span>Open to exciting opportunities</span>
               </div>
               <div className="hero-actions">
-                <button className="btn btn-primary" onClick={handleContactClick}>
+                <button className="btn btn-hk" onClick={handleContactClick}>
                   Contact me
                 </button>
                 <a
